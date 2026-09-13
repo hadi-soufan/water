@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mustapha Daher Center | Water Technologies Experts Since 1998</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<style>
+/* =====================================================
+   DESIGN TOKENS
+   ===================================================== */
+:root {
+  /* Brand Palette */
+  --color-primary:             #003866;
+  --color-primary-container:   #0b4f8a;
+  --color-primary-fixed:       #d3e4ff;
+  --color-primary-fixed-dim:   #a2c9ff;
+  --color-inverse-primary:     #a2c9ff;
+  --color-on-primary:          #ffffff;
+  --color-on-primary-fixed:    #001c38;
+  --color-on-primary-container:#94c2ff;
+
+  --color-secondary:           #006398;
+  --color-secondary-container: #5bb8fe;
+  --color-secondary-fixed:     #cce5ff;
+  --color-secondary-fixed-dim: #93ccff;
+  --color-on-secondary:        #ffffff;
+  --color-on-secondary-fixed:  #001d31;
+
+  --color-tertiary:            #003b57;
+  --color-tertiary-container:  #005378;
+  --color-on-tertiary:         #ffffff;
+
+  --color-surface:                  #f8f9ff;
+  --color-surface-bright:           #f8f9ff;
+  --color-surface-dim:              #ccdbf3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low:    #eff4ff;
+  --color-surface-container:        #e6eeff;
+  --color-surface-container-high:   #dce9ff;
+  --color-surface-container-highest:#d5e3fc;
+  --color-surface-variant:          #d5e3fc;
+  --color-inverse-surface:          #233144;
+  --color-inverse-on-surface:       #eaf1ff;
+
+  --color-on-surface:          #0d1c2e;
+  --color-on-surface-variant:  #424750;
+  --color-on-background:       #0d1c2e;
+  --color-background:          #f8f9ff;
+
+  --color-outline:             #727781;
+  --color-outline-variant:     #c2c7d1;
+
+  --color-error:               #ba1a1a;
+  --color-error-container:     #ffdad6;
+  --color-on-error:            #ffffff;
+
+  /* Spacing */
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-md:   1rem;
+  --space-lg:   1.5rem;
+  --space-xl:   2.5rem;
+  --gutter:     1.5rem;
+  --margin:     3rem;
+
+  /* Border radius */
+  --radius-sm:  0.125rem;
+  --radius:     0.25rem;
+  --radius-lg:  0.5rem;
+  --radius-xl:  0.75rem;
+
+  /* Whatsapp */
+  --wa-green:   #25D366;
+  --wa-dark:    #128C7E;
+  --wa-darker:  #075E54;
+}
+
+/* =====================================================
+   RESET & BASE
+   ===================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-on-surface);
+  background: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, input, select, textarea { font-family: inherit; }
+ul { list-style: none; }
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+/* =====================================================
+   TYPOGRAPHY HELPERS
+   ===================================================== */
+.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.text-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+.text-headline-lg {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+.text-headline-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: -0.015em;
+}
+.text-headline-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.text-title-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.text-body-lg { font-size: 18px; line-height: 1.55; }
+.text-body-md { font-size: 15px; line-height: 1.6; }
+.text-body-sm { font-size: 13px; line-height: 1.54; }
+.text-label-lg { font-size: 14px; font-weight: 600; letter-spacing: 0.01em; }
+.text-label-md { font-size: 12px; font-weight: 600; letter-spacing: 0.025em; }
+.text-label-technical {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* =====================================================
+   LAYOUT CONTAINERS
+   ===================================================== */
+.container {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+@media (min-width: 768px) {
+  .container { padding-inline: var(--margin); }
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+.flex        { display: flex; }
+.flex-col    { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start  { align-items: flex-start; }
+.justify-between { justify-content: space-between; }
+.justify-center  { justify-content: center; }
+.gap-1  { gap: 0.25rem; }
+.gap-2  { gap: 0.5rem; }
+.gap-3  { gap: 0.75rem; }
+.gap-4  { gap: 1rem; }
+.gap-6  { gap: 1.5rem; }
+.gap-8  { gap: 2rem; }
+.flex-wrap { flex-wrap: wrap; }
+.grid { display: grid; }
+.hidden { display: none; }
+
+.text-primary   { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-white     { color: #fff; }
+.text-outline   { color: var(--color-outline); }
+
+.bg-primary   { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-white     { background-color: #fff; }
+.bg-surface   { background-color: var(--color-surface); }
+
+.border { border: 1px solid var(--color-outline-variant); }
+.rounded     { border-radius: var(--radius); }
+.rounded-lg  { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: var(--radius-xl); }
+
+.w-full { width: 100%; }
+.text-center { text-align: center; }
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(11,79,138,.04), 0 1px 2px -1px rgba(11,79,138,.04);
+  transition: box-shadow 0.2s;
+}
+.card-shadow:hover {
+  box-shadow: 0 8px 20px -4px rgba(11,79,138,.08), 0 4px 8px -2px rgba(11,79,138,.03);
+}
+
+.recessed {
+  background: #f1f5f9;
+  box-shadow: inset 0 1px 2px rgba(15,23,42,.06);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+  text-decoration: none;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0,56,102,.15);
+}
+.btn-primary:hover { background: var(--color-secondary); }
+.btn-outline {
+  background: var(--color-surface-container-lowest);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+.btn-outline:hover { background: var(--color-surface-container-low); }
+.btn-wa {
+  background: var(--wa-green);
+  color: #fff;
+}
+.btn-wa:hover { background: var(--wa-dark); }
+
+/* =====================================================
+   FORM ELEMENTS
+   ===================================================== */
+.field-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-outline);
+  margin-bottom: 0.25rem;
+}
+.field-input {
+  width: 100%;
+  font-size: 13px;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius);
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field-input:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 2px rgba(0,99,152,.15);
+}
+select.field-input { appearance: none; cursor: pointer; }
+
+/* =====================================================
+   1. TOP UTILITY BAR
+   ===================================================== */
+.utility-bar {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  padding: 6px var(--gutter);
+  font-size: 12px;
+}
+.utility-bar .container { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+
+.util-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background: rgba(255,255,255,.12);
+  color: var(--color-inverse-primary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(163,201,255,.25);
+}
+.util-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--color-secondary-container);
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; } 50% { opacity: .4; }
+}
+
+.util-contact { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.util-contact a { color: rgba(255,255,255,.85); font-size: 12px; display: flex; align-items: center; gap: 4px; transition: color .15s; }
+.util-contact a:hover { color: var(--color-secondary-fixed); }
+.util-sep { color: rgba(194,199,209,.4); }
+
+.btn-wa-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #128C7E;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: background .15s;
+}
+.btn-wa-sm:hover { background: var(--wa-darker); }
+
+/* =====================================================
+   2. STICKY NAVIGATION
+   ===================================================== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-surface-container-lowest);
+  border-bottom: 1px solid rgba(194,199,209,.4);
+  box-shadow: 0 1px 6px rgba(11,79,138,.05);
+}
+.nav .container { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { height: 48px; width: auto; object-fit: contain; transition: transform .2s; }
+.brand:hover img { transform: scale(1.01); }
+.brand-text { border-left: 1px solid var(--color-outline-variant); padding-left: 12px; }
+.brand-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 17px; color: var(--color-primary); line-height: 1.2; }
+.brand-sub  { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-secondary); margin-top: 2px; }
+
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--color-on-surface-variant); transition: color .15s; padding-bottom: 2px; }
+.nav-links a:hover, .nav-links a.active { color: var(--color-primary); border-bottom: 2px solid var(--color-primary); }
+
+.nav-cta { display: flex; align-items: center; gap: 12px; }
+
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--color-primary); border-radius: 2px; transition: all .25s; }
+
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--color-surface-container-lowest);
+  z-index: 100;
+  padding: 2rem var(--gutter);
+  flex-direction: column;
+  gap: 2rem;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav-close { align-self: flex-end; cursor: pointer; }
+.mobile-nav a { font-size: 20px; font-weight: 600; color: var(--color-on-surface); padding: 0.5rem 0; border-bottom: 1px solid var(--color-outline-variant); }
+
+@media (max-width: 1023px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-cta .btn { display: none; }
+}
+@media (max-width: 640px) {
+  .brand-text { display: none; }
+}
+
+/* =====================================================
+   3. HERO SECTION
+   ===================================================== */
+.hero {
+  background: linear-gradient(to bottom, var(--color-surface), rgba(239,244,255,.6));
+  border-bottom: 1px solid rgba(194,199,209,.3);
+  padding: 4rem 0;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: var(--color-surface-container);
+  border: 1px solid rgba(194,199,209,.6);
+  border-radius: var(--radius-xl);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(28px,4vw,42px); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; color: var(--color-on-surface); margin: 1rem 0; }
+
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem; }
+
+.hero-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--color-outline-variant); }
+.hero-stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 700; color: var(--color-primary); }
+.hero-stat-label { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-on-surface-variant); margin-top: 2px; }
+
+/* Carousel */
+.carousel-frame {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(11,79,138,.05);
+}
+.carousel-window {
+  position: relative;
+  height: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0d1b2a;
+}
+.carousel-window img { width: 100%; height: 100%; object-fit: cover; opacity: .9; transition: opacity .3s; }
+.carousel-overlay {
+  position: absolute;
+  bottom: 12px; left: 12px; right: 12px;
+  background: rgba(2,10,20,.85);
+  backdrop-filter: blur(8px);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(100,120,150,.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.carousel-tag  { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-secondary-container); }
+.carousel-title { font-size: 15px; font-weight: 600; color: #f1f5f9; margin-top: 2px; }
+.carousel-live  { display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; font-family: monospace; color: #cbd5e1; letter-spacing: 0.05em; text-transform: uppercase; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; animation: ping 1.2s infinite; }
+@keyframes ping { 0%,100% { opacity:1; } 50% { opacity:.3; } }
+
+.carousel-tabs { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-top: 12px; }
+.carousel-tab {
+  padding: 8px;
+  text-align: left;
+  border-radius: 4px;
+  border: 1px solid var(--color-outline-variant);
+  background: none;
+  cursor: pointer;
+  transition: all .15s;
+}
+.carousel-tab:hover { background: var(--color-surface-container-low); }
+.carousel-tab.active { border-color: var(--color-primary); background: var(--color-surface-container-low); }
+.carousel-tab-num  { display: block; font-size: 10px; font-weight: 700; color: var(--color-outline); font-family: monospace; }
+.carousel-tab.active .carousel-tab-num { color: var(--color-primary); }
+.carousel-tab-name { display: block; font-size: 12px; font-weight: 500; color: var(--color-on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+
+/* =====================================================
+   SECTION WRAPPER
+   ===================================================== */
+.section { padding: 5rem 0; border-bottom: 1px solid rgba(194,199,209,.3); }
+.section--alt { background: var(--color-surface-container-lowest); }
+
+.section-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-secondary); }
+.section-title   { color: var(--color-primary); margin: 0.5rem 0; }
+.section-body    { color: var(--color-on-surface-variant); margin-top: 0.75rem; max-width: 64ch; }
+.section-header  { margin-bottom: 3rem; }
+
+/* =====================================================
+   4. ABOUT SECTION
+   ===================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .about-grid { grid-template-columns: 5fr 7fr; }
+}
+
+.heritage-card {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.heritage-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-container-low);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.heritage-icon .material-symbols-outlined { font-size: 24px; }
+.heritage-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--color-outline-variant);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 500px) {
+  .what-we-do-grid { grid-template-columns: 1fr; }
+}
+.wwd-card {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.6);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+.wwd-card .material-symbols-outlined { font-size: 28px; color: var(--color-secondary); display: block; margin-bottom: 8px; }
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .values-grid { grid-template-columns: repeat(5, 1fr); }
+}
+.value-card {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.6);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+}
+.value-card .material-symbols-outlined { font-size: 24px; color: var(--color-primary); display: block; margin-bottom: 6px; }
+.value-card p { font-size: 12px; color: var(--color-on-surface-variant); margin-top: 4px; }
+.values-heading { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 1rem; }
+
+/* =====================================================
+   5. SERVICES SECTION
+   ===================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.service-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.service-card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; }
+.service-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.service-icon .material-symbols-outlined { font-size: 24px; color: #fff; }
+.service-sub { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-secondary); margin-top: 2px; }
+
+.protocol-box {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.5);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+.protocol-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-primary); }
+.protocol-ref { font-family: monospace; font-size: 11px; color: var(--color-secondary); }
+.protocol-steps { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; }
+@media (min-width: 480px) { .protocol-steps { grid-template-columns: repeat(3,1fr); } }
+
+.step-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-on-surface-variant); font-weight: 500; }
+.step-num { width: 18px; height: 18px; border-radius: 50%; background: var(--color-surface-container); color: var(--color-primary); font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.5);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+}
+.feature-item .material-symbols-outlined { font-size: 22px; color: var(--color-secondary); margin-top: 1px; flex-shrink: 0; }
+.feature-item-title { font-size: 15px; font-weight: 600; color: var(--color-on-surface); display: block; }
+
+.check-list { display: flex; flex-direction: column; gap: 8px; }
+.check-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--color-on-surface-variant); }
+.check-item .material-symbols-outlined { font-size: 16px; color: var(--color-secondary); flex-shrink: 0; }
+
+/* =====================================================
+   6. PRODUCTS SECTION
+   ===================================================== */
+.products-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1.5rem; margin-bottom: 2.5rem; }
+.filter-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-pill {
+  padding: 6px 14px;
+  border-radius: var(--radius-xl);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.filter-pill.active { background: var(--color-primary); color: #fff; }
+.filter-pill:not(.active) { background: var(--color-surface-container); color: var(--color-on-surface-variant); }
+.filter-pill:not(.active):hover { background: var(--color-surface-container-high); }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.product-card {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-card.wide { grid-column: span 2; }
+@media (max-width: 600px) { .product-card.wide { grid-column: span 1; } }
+
+.product-badge-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.product-badge { padding: 2px 8px; border-radius: var(--radius-xl); background: var(--color-surface-container-low); color: var(--color-primary); font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid var(--color-primary-fixed); }
+.product-ref { font-size: 11px; font-family: monospace; color: var(--color-outline); }
+.product-specs { margin-top: 1rem; padding: 10px; border-radius: var(--radius); background: #f1f5f9; box-shadow: inset 0 1px 2px rgba(15,23,42,.06); font-size: 12px; font-family: monospace; color: #334155; }
+.product-specs div { margin-bottom: 4px; }
+.product-specs .wide-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.product-inquire {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  border-radius: var(--radius);
+  background: var(--color-surface-container);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background .15s, color .15s;
+}
+.product-inquire:hover { background: var(--color-primary); color: #fff; }
+
+/* =====================================================
+   7. PROJECTS SECTION
+   ===================================================== */
+.projects-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2.5rem; }
+.projects-tabs { display: flex; background: var(--color-surface-container); padding: 4px; border-radius: var(--radius-lg); border: 1px solid rgba(194,199,209,.6); }
+.proj-tab {
+  padding: 6px 16px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-on-surface-variant);
+  transition: all .15s;
+}
+.proj-tab.active { background: #fff; color: var(--color-primary); font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.project-card[style*="display: none"] { display: none !important; }
+
+.project-img { position: relative; height: 192px; background: #1e293b; overflow: hidden; }
+.project-img img { width: 100%; height: 100%; object-fit: cover; }
+.project-status {
+  position: absolute;
+  top: 12px; left: 12px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.project-region {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: rgba(2,10,20,.8);
+  color: #fff;
+  font-size: 11px;
+  font-family: monospace;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.project-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.project-type { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-secondary); }
+.project-name { font-size: 15px; font-weight: 600; color: var(--color-on-surface); margin: 4px 0 8px; }
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-outline-variant);
+  font-size: 12px;
+  font-family: monospace;
+  color: #475569;
+}
+.project-meta strong { color: var(--color-on-surface); }
+
+/* =====================================================
+   8. CLIENT FEEDBACK SECTION
+   ===================================================== */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .feedback-grid { grid-template-columns: 4fr 8fr; }
+}
+
+.assessment-form {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.assessment-form-head { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; }
+
+.stars { display: flex; gap: 6px; font-size: 20px; color: #f59e0b; cursor: pointer; }
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1rem;
+}
+.metric-cell { text-align: center; }
+.metric-cell:not(:last-child) { border-right: 1px solid rgba(194,199,209,.2); }
+.metric-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 700; color: var(--color-secondary-container); }
+.metric-label { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #cbd5e1; margin-top: 4px; }
+
+.testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 640px) { .testimonials-grid { grid-template-columns: 1fr; } }
+.testimonial-card {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.7);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.stars-sm { color: #f59e0b; font-size: 14px; }
+.testimonial-text { font-size: 13px; color: var(--color-on-surface-variant); font-style: italic; margin-top: 8px; line-height: 1.6; }
+.testimonial-author { display: flex; align-items: center; gap: 10px; padding-top: 12px; margin-top: 12px; border-top: 1px solid var(--color-outline-variant); }
+.author-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--color-surface-container-high); color: var(--color-primary); font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.author-name { font-size: 13px; font-weight: 700; color: var(--color-on-surface); }
+.author-role { font-size: 11px; color: var(--color-on-surface-variant); }
+
+/* =====================================================
+   9. QUOTATION SECTION
+   ===================================================== */
+.quote-section { max-width: 900px; margin-inline: auto; }
+.wa-fast-track {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+.wa-avatar { width: 40px; height: 40px; border-radius: 50%; background: #059669; color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.wa-avatar .material-symbols-outlined { font-size: 22px; }
+.wa-text-title { font-size: 14px; font-weight: 700; color: #064e3b; }
+.wa-text-body  { font-size: 12px; color: #065f46; }
+.btn-wa-track { background: #059669; color: #fff; padding: 8px 16px; border-radius: var(--radius); font-size: 12px; font-weight: 600; flex-shrink: 0; transition: background .15s; }
+.btn-wa-track:hover { background: #047857; }
+
+.rfq-form {
+  background: var(--color-surface);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .form-grid { grid-template-columns: 1fr 1fr; }
+}
+.form-grid .full { grid-column: 1 / -1; }
+
+.attach-zone {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px dashed var(--color-outline-variant);
+  border-radius: var(--radius);
+  background: var(--color-surface-container-low);
+}
+.attach-text { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--color-on-surface-variant); }
+.btn-browse {
+  background: #fff;
+  border: 1px solid var(--color-outline-variant);
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.btn-browse:hover { border-color: var(--color-primary); }
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--color-outline-variant);
+}
+.btn-reset {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--color-outline);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+}
+.btn-reset:hover { border-color: var(--color-outline-variant); color: var(--color-on-surface); }
+
+/* =====================================================
+   10. CONTACT SECTION
+   ===================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .contact-grid { grid-template-columns: 5fr 7fr; }
+}
+
+.contact-card {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.contact-card-title { font-size: 15px; font-weight: 600; color: var(--color-on-surface); border-bottom: 1px solid var(--color-outline-variant); padding-bottom: 10px; margin-bottom: 1.25rem; }
+.contact-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1rem; }
+.contact-row .material-symbols-outlined { font-size: 20px; color: var(--color-primary); margin-top: 1px; flex-shrink: 0; }
+.contact-row div { font-size: 13px; color: var(--color-on-surface); line-height: 1.6; }
+.contact-row a:hover { color: var(--color-secondary); }
+
+.open-badge { display: inline-flex; align-items: center; gap: 6px; background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 10px; border-radius: var(--radius); }
+.open-dot { width: 8px; height: 8px; border-radius: 50%; background: #10b981; }
+
+.map-frame {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  margin-top: 1rem;
+}
+.map-img { position: relative; height: 224px; border-radius: var(--radius); background: #e2e8f0; overflow: hidden; }
+.map-img img { width: 100%; height: 100%; object-fit: cover; }
+.map-callout {
+  position: absolute;
+  bottom: 8px; left: 8px; right: 8px;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.map-callout-title { font-size: 13px; font-weight: 700; color: var(--color-primary); }
+.map-callout-sub   { font-size: 10px; color: #64748b; }
+.btn-map { background: var(--color-primary); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 10px; border-radius: var(--radius); transition: background .15s; }
+.btn-map:hover { background: var(--color-secondary); }
+
+.inquiry-form {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid rgba(194,199,209,.8);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.inquiry-title { font-size: 15px; font-weight: 600; color: var(--color-on-surface); margin-bottom: 4px; }
+.inquiry-sub   { font-size: 13px; color: var(--color-on-surface-variant); margin-bottom: 1.5rem; }
+
+.form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+@media (max-width: 640px) { .form-row-3 { grid-template-columns: 1fr; } }
+
+/* =====================================================
+   11. FLOATING WHATSAPP
+   ===================================================== */
+.wa-float {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 50;
+}
+.wa-float-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--wa-green);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37,211,102,.35);
+  transition: all .2s;
+}
+.wa-float-btn:hover { background: var(--wa-dark); transform: scale(1.05); box-shadow: 0 6px 20px rgba(37,211,102,.4); }
+.wa-float-btn .material-symbols-outlined { font-size: 28px; }
+.wa-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0f172a;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.wa-float:hover .wa-tooltip { opacity: 1; }
+.wa-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%; right: -4px;
+  transform: translateY(-50%);
+  width: 8px; height: 8px;
+  background: #0f172a;
+  rotate: 45deg;
+}
+
+/* =====================================================
+   12. FOOTER
+   ===================================================== */
+.footer { background: var(--color-surface-container); border-top: 1px solid var(--color-outline-variant); }
+.footer-inner { padding: 3.5rem 0 1.5rem; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(194,199,209,.6);
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .footer-grid { grid-template-columns: 4fr 2fr 3fr 3fr; }
+}
+.footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; }
+.footer-brand img { height: 40px; width: auto; object-fit: contain; }
+.footer-brand-name { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; color: var(--color-on-surface); line-height: 1.2; }
+.footer-brand-sub  { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-secondary); margin-top: 2px; }
+.footer-desc { font-size: 13px; color: var(--color-on-surface-variant); line-height: 1.6; margin-bottom: 1rem; }
+.footer-cert { display: flex; gap: 8px; flex-wrap: wrap; }
+.cert-badge { padding: 4px 10px; border: 1px solid var(--color-outline-variant); border-radius: var(--radius); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-primary); background: var(--color-surface-container-highest); }
+
+.footer-col h4 { font-size: 14px; font-weight: 700; color: var(--color-primary); margin-bottom: 0.75rem; }
+.footer-col ul li { margin-bottom: 6px; }
+.footer-col ul li a { font-size: 13px; color: var(--color-on-surface-variant); transition: color .15s; }
+.footer-col ul li a:hover { color: var(--color-primary); }
+.footer-address { font-size: 13px; color: var(--color-on-surface-variant); line-height: 1.7; }
+.footer-address strong { color: var(--color-on-surface); }
+.footer-address a { color: var(--color-primary); font-weight: 700; font-family: monospace; }
+.footer-address a:hover { color: var(--color-secondary); }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 13px;
+  color: var(--color-on-surface-variant);
+}
+.footer-legal { display: flex; align-items: center; gap: 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-outline); }
+.footer-legal a:hover { color: var(--color-primary); }
+
+/* =====================================================
+   RESPONSIVE TWEAKS
+   ===================================================== */
+@media (max-width: 640px) {
+  .section { padding: 3rem 0; }
+  .hero { padding: 2.5rem 0; }
+  .rfq-form { padding: 1.25rem; }
+  .inquiry-form { padding: 1.25rem; }
+  .metrics-row { gap: 0; }
+  .hero-stats { gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- =====================================================
+   MOBILE NAV OVERLAY
+===================================================== -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-close" id="mobileClose">
+    <span class="material-symbols-outlined" style="font-size:28px;color:var(--color-primary)">close</span>
+  </div>
+  <a href="#about"    onclick="closeMobileNav()">About Us</a>
+  <a href="#services" onclick="closeMobileNav()">Services</a>
+  <a href="#products" onclick="closeMobileNav()">Products</a>
+  <a href="#projects" onclick="closeMobileNav()">Projects</a>
+  <a href="#feedback" onclick="closeMobileNav()">Client Feedback</a>
+  <a href="#quote"    onclick="closeMobileNav()">Quotation Request</a>
+  <a href="#contact"  onclick="closeMobileNav()">Contact Us</a>
+  <a href="#quote" class="btn btn-primary" onclick="closeMobileNav()" style="justify-content:center;">Quick Quote</a>
+</div>
+
+<!-- =====================================================
+   1. UTILITY BAR
+===================================================== -->
+<header class="utility-bar">
+  <div class="container">
+    <div class="flex items-center gap-2">
+      <span class="util-badge"><span class="util-dot"></span>Serving Lebanon &amp; the Middle East Since 1998</span>
+      <span class="util-sep" style="display:none">|</span>
+      <span style="display:none" class="flex items-center gap-1 text-label-md" style="color:var(--color-surface-container-low)">
+        <span class="material-symbols-outlined" style="font-size:14px">pin_drop</span>Ghazieh, South Lebanon
+      </span>
+    </div>
+    <div class="util-contact">
+      <a href="tel:+9617220181"><span class="material-symbols-outlined" style="font-size:14px">call</span>+961 7 220 181</a>
+      <span class="util-sep">/</span>
+      <a href="tel:+9613581180">+961 3 581 180</a>
+      <span class="util-sep">|</span>
+      <a href="mailto:info@dahercenter.com" style="display:none"><span class="material-symbols-outlined" style="font-size:14px">mail</span>info@dahercenter.com</a>
+      <a href="https://wa.me/9613581180" class="btn-wa-sm" target="_blank" rel="noopener noreferrer">
+        <span class="material-symbols-outlined" style="font-size:14px">chat</span>Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- =====================================================
+   2. NAVIGATION
+===================================================== -->
+<nav class="nav">
+  <div class="container">
+    <a href="#" class="brand">
+      <img src="https://lh3.googleusercontent.com/aida/AEtjO1UwkybF8jNFtH1yeWau34PZzVNnAGohjSApTV8NvNwSJaVQQHgAvXIiYPl47EeTwKszytg8gsy-UWHQA-KWZjJw-xt-G3-REnrO2aPhAvThbOXoas13NSpxnNgMXXsddZjdyGJvoKlcqwcB1nJSzMJJ3ZcrAF4Q7-J3mt5JwI_1gj6ta6YaZCgcFuDaLxNJs8NsFWdFeg49vUOoCH5n4zaWeIu8huJ1G0iZpe4Q8epnWsWd6F1CYmDVGTQ" alt="Mustapha Daher Center Logo"/>
+      <div class="brand-text">
+        <div class="brand-name">Mustapha Daher Center</div>
+        <div class="brand-sub">Water Technologies Experts</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#about" class="active">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#projects">Projects</a>
+      <a href="#feedback">Client Feedback</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#quote" class="btn btn-primary">
+        <span class="material-symbols-outlined" style="font-size:18px">calculate</span>Quick Quote
+      </a>
+      <div class="hamburger" id="hamburger" onclick="openMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- =====================================================
+   3. HERO
+===================================================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Left: Text -->
+      <div>
+        <span class="hero-eyebrow">
+          <span class="material-symbols-outlined" style="font-size:16px">verified</span>
+          Lebanese Hydraulic Leadership Since 1998
+        </span>
+        <h1 class="hero-title">
+          Precision Engineering &amp; Water Technology Solutions
+        </h1>
+        <p class="text-body-lg" style="color:var(--color-on-surface-variant);line-height:1.55">
+          Over 25 years of mastery in deep well drilling, advanced solar pumping systems, and hydrogeological engineering across Lebanon and the Middle East.
+        </p>
+        <div class="hero-ctas">
+          <a href="#services" class="btn btn-primary">Explore Our Solutions <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+          <a href="#quote" class="btn btn-outline"><span class="material-symbols-outlined" style="font-size:18px">request_quote</span>Instant Quotation</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hero-stat-value">25+</div><div class="hero-stat-label">Years Experience</div></div>
+          <div><div class="hero-stat-value">1,200+</div><div class="hero-stat-label">Wells Drilled</div></div>
+          <div><div class="hero-stat-value" style="color:#059669">100%</div><div class="hero-stat-label">Quality Guaranteed</div></div>
+        </div>
+      </div>
+      <!-- Right: Carousel -->
+      <div>
+        <div class="carousel-frame">
+          <div class="carousel-window">
+            <img id="carouselImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ew8p3Awj8W8Z-66AjRTtaZxB8ncfQbl0Vhfp_FRfaMyh9y7vo9qaHSseDHbZrAolT0MtIefpupK6jGht48Hpby0PjfnZIlAJvTEdfEZ-J8BfVNrJTVNi2m8UqKdb9Y46jdrRXUk8h5Elc_PvZov1bkBn2CxOc9ZY-nX6UDoVdXUIixcw0wxBBxGM_iC2UZJiys-QTYik1cw4IsGF22KqKDT9vk8OPv3Z2J__DzqXukNNddCJfrNI" alt="Deep Well Drilling Rig Operations"/>
+            <div class="carousel-overlay">
+              <div>
+                <div class="carousel-tag" id="carouselTag">Active Engineering Operation</div>
+                <div class="carousel-title" id="carouselTitle">Deep Well Drilling Rig Operations</div>
+              </div>
+              <div class="carousel-live">
+                <span class="live-dot"></span>LIVE SPECS
+              </div>
+            </div>
+          </div>
+          <div class="carousel-tabs" id="carouselTabs">
+            <button class="carousel-tab active" onclick="changeSlide(0)">
+              <span class="carousel-tab-num">01</span>
+              <span class="carousel-tab-name">Rig Drilling</span>
+            </button>
+            <button class="carousel-tab" onclick="changeSlide(1)">
+              <span class="carousel-tab-num">02</span>
+              <span class="carousel-tab-name">Solar Pumps</span>
+            </button>
+            <button class="carousel-tab" onclick="changeSlide(2)">
+              <span class="carousel-tab-num">03</span>
+              <span class="carousel-tab-name">Submersible</span>
+            </button>
+            <button class="carousel-tab" onclick="changeSlide(3)">
+              <span class="carousel-tab-num">04</span>
+              <span class="carousel-tab-name">Surveys</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   4. ABOUT
+===================================================== -->
+<section class="section" id="about" style="background:var(--color-surface)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Established 1998 by Moustapha Daher</span>
+      <h2 class="text-headline-lg section-title">Pioneering Hydraulic &amp; Subterranean Engineering</h2>
+      <p class="section-body text-body-lg">Mustapha Daher Center is dedicated to engineering excellence, rigorous quality assurance, client satisfaction, and environmental compliance in sustainable water extraction and management across Lebanon and neighboring regions.</p>
+    </div>
+
+    <div class="about-grid">
+      <!-- Heritage Card -->
+      <div class="heritage-card card-shadow">
+        <div>
+          <div class="heritage-icon"><span class="material-symbols-outlined">water</span></div>
+          <h3 class="text-headline-sm" style="margin-bottom:0.75rem">Generational Engineering Expertise</h3>
+          <p class="text-body-md" style="color:var(--color-on-surface-variant)">Founded over a quarter-century ago in Ghazieh, South Lebanon. Our firm has developed proprietary hydrogeological methodologies tailored specifically to Middle Eastern limestone karsts, coastal aquifers, and complex mountainous strata.</p>
+        </div>
+        <div class="heritage-footer">
+          <span style="color:var(--color-outline)">Licensed Entity</span>
+          <span style="color:var(--color-primary)">ISO 9001:2015 ALIGNED</span>
+        </div>
+      </div>
+      <!-- What We Do -->
+      <div class="what-we-do-grid">
+        <div class="wwd-card card-shadow">
+          <span class="material-symbols-outlined">construction</span>
+          <h4 class="text-title-md" style="margin-bottom:6px">Drilling &amp; Equipping Wells</h4>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant)">Rotary &amp; percussion drilling to 800+ meter depths with precision casing and hydrodynamic development.</p>
+        </div>
+        <div class="wwd-card card-shadow">
+          <span class="material-symbols-outlined">solar_power</span>
+          <h4 class="text-title-md" style="margin-bottom:6px">Solar Pumping Systems</h4>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant)">High-yield PV arrays coupled with solar VFD inverters for off-grid agricultural and municipal pumping.</p>
+        </div>
+        <div class="wwd-card card-shadow">
+          <span class="material-symbols-outlined">biotech</span>
+          <h4 class="text-title-md" style="margin-bottom:6px">Geophysical Surveys</h4>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant)">Advanced subterranean electrical resistivity, aquifer stratigraphic mapping, and chemical water testing.</p>
+        </div>
+        <div class="wwd-card card-shadow">
+          <span class="material-symbols-outlined">precision_manufacturing</span>
+          <h4 class="text-title-md" style="margin-bottom:6px">Distributing &amp; Servicing</h4>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant)">Direct sourcing of Tier-1 heavy-duty submersible pumps, automated control panels, and genuine components.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values -->
+    <p class="values-heading">Guiding Operational Values</p>
+    <div class="values-grid">
+      <div class="value-card card-shadow"><span class="material-symbols-outlined">gavel</span><div class="text-title-md">Integrity</div><p>Honest borehole estimates &amp; uncompromised steel casings.</p></div>
+      <div class="value-card card-shadow"><span class="material-symbols-outlined">verified_user</span><div class="text-title-md">Credibility</div><p>Over 25 years of proven delivery to municipal councils.</p></div>
+      <div class="value-card card-shadow"><span class="material-symbols-outlined">visibility</span><div class="text-title-md">Transparency</div><p>Comprehensive lithological logs provided with every meter.</p></div>
+      <div class="value-card card-shadow"><span class="material-symbols-outlined">military_tech</span><div class="text-title-md">Excellence</div><p>Calibrated European testing rigs and certified pump curves.</p></div>
+      <div class="value-card card-shadow" style="grid-column:span 2"><span class="material-symbols-outlined">lightbulb</span><div class="text-title-md">Innovation</div><p>Smart MPPT tracking and hybrid solar integration.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   5. SERVICES
+===================================================== -->
+<section class="section section--alt" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Technical Engineering Divisions</span>
+      <h2 class="text-headline-lg section-title">Specialized Turnkey Water Infrastructure Services</h2>
+      <p class="section-body text-body-lg">From subterranean hydrogeology to operational solarized pumping stations — every phase executed under ISO-grade technical protocols.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card card-shadow">
+        <div class="service-card-head">
+          <div class="service-icon" style="background:var(--color-primary)"><span class="material-symbols-outlined">hardware</span></div>
+          <div>
+            <h3 class="text-headline-sm">Drilling &amp; Equipping Water Wells</h3>
+            <span class="service-sub">Core Hydraulic Discipline</span>
+          </div>
+        </div>
+        <p class="text-body-md" style="color:var(--color-on-surface-variant);margin-bottom:1.5rem">Executing deep boreholes with heavy rotary and percussion rigs. We manage continuous casing installation, gravel packing, and certified yield step-drawdown testing.</p>
+        <div class="protocol-box">
+          <div class="protocol-header">
+            <span>The 12-Step Engineering Protocol</span>
+            <span class="protocol-ref">DOC-MDC-PRC-12</span>
+          </div>
+          <div class="protocol-steps">
+            <div class="step-item"><span class="step-num">1</span>Site Assessment</div>
+            <div class="step-item"><span class="step-num">2</span>Underground Water Location</div>
+            <div class="step-item"><span class="step-num">3</span>Rig Setup</div>
+            <div class="step-item"><span class="step-num">4</span>Hole Drilling</div>
+            <div class="step-item"><span class="step-num">5</span>Well Casing</div>
+            <div class="step-item"><span class="step-num">6</span>Grouting</div>
+            <div class="step-item"><span class="step-num">7</span>Pump Setup</div>
+            <div class="step-item"><span class="step-num">8</span>Wellhead Cap Setup</div>
+            <div class="step-item"><span class="step-num">9</span>Power Systems</div>
+            <div class="step-item"><span class="step-num">10</span>Control &amp; Automation</div>
+            <div class="step-item"><span class="step-num">11</span>Water Filters</div>
+            <div class="step-item"><span class="step-num">12</span>Final Testing</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card card-shadow">
+        <div class="service-card-head">
+          <div class="service-icon" style="background:var(--color-secondary)"><span class="material-symbols-outlined">solar_power</span></div>
+          <div>
+            <h3 class="text-headline-sm">Installing Solar Power for Pumps</h3>
+            <span class="service-sub">Clean Agricultural Energy</span>
+          </div>
+        </div>
+        <p class="text-body-md" style="color:var(--color-on-surface-variant);margin-bottom:1.5rem">Autonomous, fuel-free water extraction engineered for heavy kilowatt submerged borehole motors, operating seamlessly in off-grid farmlands and mountain zones.</p>
+        <div class="feature-item">
+          <span class="material-symbols-outlined">wb_sunny</span>
+          <div>
+            <span class="feature-item-title">High-Efficiency PV Arrays</span>
+            <span class="text-body-sm" style="color:var(--color-on-surface-variant)">Tier-1 bifacial panels mounted on hot-dip galvanized structural ground racks engineered for wind resistance.</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="material-symbols-outlined">developer_board</span>
+          <div>
+            <span class="feature-item-title">Dynamic MPPT Solar VFD Drives</span>
+            <span class="text-body-sm" style="color:var(--color-on-surface-variant)">Continuous solar irradiance tracking matching submersible pump frequency directly with real-time sunshine.</span>
+          </div>
+        </div>
+        <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-top:1rem">We specialize in this renewable energy because it is eco-friendly, reduces operating costs, and works well in remote areas.</p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card card-shadow">
+        <div class="service-card-head">
+          <div class="service-icon" style="background:var(--color-primary-container)"><span class="material-symbols-outlined">build_circle</span></div>
+          <div>
+            <h3 class="text-headline-sm">General Maintenance &amp; Servicing</h3>
+            <span class="service-sub">24/7 Rapid Field Response</span>
+          </div>
+        </div>
+        <p class="text-body-md" style="color:var(--color-on-surface-variant);margin-bottom:1rem">Preventative and rapid corrective intervention covering wells' electro-mechanical operating systems — pumps, solar panels, inverters, control panels, AC Output Reactors, pipes, and cables.</p>
+        <div class="check-list">
+          <div class="check-item"><span class="material-symbols-outlined">check_circle</span>Submersible motor rewinding and mechanical seal replacements.</div>
+          <div class="check-item"><span class="material-symbols-outlined">check_circle</span>Ultrasonic casing inspection and underwater borehole camera surveys.</div>
+          <div class="check-item"><span class="material-symbols-outlined">check_circle</span>High-pressure acidizing and chemical well rehabilitation.</div>
+          <div class="check-item"><span class="material-symbols-outlined">check_circle</span>Solar panel cleaning, inverter diagnostics, and cable integrity testing.</div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card card-shadow">
+        <div class="service-card-head">
+          <div class="service-icon" style="background:var(--color-tertiary)"><span class="material-symbols-outlined">analytics</span></div>
+          <div>
+            <h3 class="text-headline-sm">Hydrogeological Research &amp; Studies</h3>
+            <span class="service-sub">Scientific Geological Modeling</span>
+          </div>
+        </div>
+        <p class="text-body-md" style="color:var(--color-on-surface-variant);margin-bottom:1rem">Pre-drilling geophysical research to identify deep water-bearing aquifers, avoid dry strata, prevent saltwater intrusion, and ensure maximum water yield. Covers all Lebanese regions.</p>
+        <div class="check-list">
+          <div class="check-item"><span class="material-symbols-outlined">check_circle</span>Vertical Electrical Sounding (VES) and 2D resistivity imaging.</div>
+          <div class="check-item"><span class="material-symbols-outlined">check_circle</span>Aquifer transmissivity, storativity, and recharge rate modeling.</div>
+          <div class="check-item"><span class="material-symbols-outlined">check_circle</span>Certified physical, chemical, and microbiological water laboratory testing.</div>
+          <div class="check-item"><span class="material-symbols-outlined">check_circle</span>Elaborate hydrogeology information system covering all Lebanese regions.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   6. PRODUCTS
+===================================================== -->
+<section class="section" id="products" style="background:var(--color-surface)">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <span class="section-eyebrow">Direct Wholesale &amp; Retail Inventory</span>
+        <h2 class="text-headline-lg section-title" style="margin-top:0.25rem">Certified Water Engineering Products</h2>
+        <p class="text-body-md" style="color:var(--color-on-surface-variant);margin-top:0.5rem;max-width:56ch">Sourced exclusively from certified European and global manufacturers, engineered to withstand aggressive subterranean conditions and high head pressures.</p>
+      </div>
+      <div class="filter-pills">
+        <button class="filter-pill active" onclick="filterProducts('all',this)">All Products</button>
+        <button class="filter-pill" onclick="filterProducts('pumps',this)">Pumps</button>
+        <button class="filter-pill" onclick="filterProducts('inverters',this)">Inverters &amp; Drives</button>
+        <button class="filter-pill" onclick="filterProducts('pipes',this)">Pipes &amp; Casings</button>
+      </div>
+    </div>
+
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card card-shadow" data-cat="pumps">
+        <div>
+          <div class="product-badge-row"><span class="product-badge">Pumping Units</span><span class="product-ref">SS-304 / SS-316</span></div>
+          <h3 class="text-title-md">Submersible &amp; Surface Pumps</h3>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-top:8px">Deep well multi-stage centrifugal pumps, heavy-duty borehole motors, and high-pressure booster stations.</p>
+          <div class="product-specs"><div>• Max Head: Up to 650 meters</div><div>• Discharge: 5 m³/h to 450 m³/h</div></div>
+        </div>
+        <a href="#quote" class="product-inquire">Inquire About Product</a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card card-shadow" data-cat="automation">
+        <div>
+          <div class="product-badge-row"><span class="product-badge">Automation</span><span class="product-ref">IP55 / IP65</span></div>
+          <h3 class="text-title-md">Control Panels</h3>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-top:8px">Automated PLC pump control stations with dry-run protection, phase reversal guards, and liquid level sensors.</p>
+          <div class="product-specs"><div>• Soft starters &amp; Star-Delta</div><div>• Integrated digital volt/ammeter</div></div>
+        </div>
+        <a href="#quote" class="product-inquire">Inquire About Product</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card card-shadow" data-cat="inverters">
+        <div>
+          <div class="product-badge-row"><span class="product-badge">Solar Drives</span><span class="product-ref">VFD / MPPT</span></div>
+          <h3 class="text-title-md">Solar Pump Inverters</h3>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-top:8px">Specialized Variable Frequency Drives conversion matching solar DC arrays to 3-phase AC submersible motors.</p>
+          <div class="product-specs"><div>• Efficiency: &gt;99% MPPT</div><div>• Power: 2.2 kW to 160 kW</div></div>
+        </div>
+        <a href="#quote" class="product-inquire">Inquire About Product</a>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card card-shadow" data-cat="inverters">
+        <div>
+          <div class="product-badge-row"><span class="product-badge">Protection</span><span class="product-ref">Harmonic Filter</span></div>
+          <h3 class="text-title-md">AC Output Reactors</h3>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-top:8px">Harmonic filtration mitigating dV/dt voltage spikes on long submerged cable runs, safeguarding motor windings.</p>
+          <div class="product-specs"><div>• Cable runs &gt;100m protected</div><div>• Thermal Class H insulation</div></div>
+        </div>
+        <a href="#quote" class="product-inquire">Inquire About Product</a>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card card-shadow" data-cat="pipes">
+        <div>
+          <div class="product-badge-row"><span class="product-badge">Conductors</span><span class="product-ref">EPR / Rubber</span></div>
+          <h3 class="text-title-md">Submersible Cables</h3>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-top:8px">Heavy-duty flat and round rubber insulated waterproof power cables engineered for deep underwater submersion.</p>
+          <div class="product-specs"><div>• Continuous 600/1000V rated</div><div>• Certified drinking water safe</div></div>
+        </div>
+        <a href="#quote" class="product-inquire">Inquire About Product</a>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card card-shadow" data-cat="pipes">
+        <div>
+          <div class="product-badge-row"><span class="product-badge">Casing</span><span class="product-ref">uPVC &amp; Steel</span></div>
+          <h3 class="text-title-md">Pipes &amp; Casings</h3>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-top:8px">High-tensile steel, hot-dip galvanized and ribbed uPVC well casings with calibrated slotted screen sections.</p>
+          <div class="product-specs"><div>• Diameters: 4" up to 24"</div><div>• Corrosion-proof threaded joints</div></div>
+        </div>
+        <a href="#quote" class="product-inquire">Inquire About Product</a>
+      </div>
+
+      <!-- Product 7 — wide -->
+      <div class="product-card wide card-shadow" data-cat="accessories">
+        <div>
+          <div class="product-badge-row"><span class="product-badge">Fittings &amp; Hardware</span><span class="product-ref">Cast Iron &amp; Bronze</span></div>
+          <h3 class="text-title-md">Accessories, Valves &amp; Flanges</h3>
+          <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-top:8px">Sanitary certified wellhead clamps, electromagnetic water meters, non-return check valves, mechanical pressure gauges, air-release valves, and heavy-duty steel flanges.</p>
+          <div class="product-specs">
+            <div class="wide-specs">
+              <div>• Pressure ratings: PN16 to PN40</div>
+              <div>• Sanitary wellhead seals</div>
+              <div>• Ultrasonic flow meters</div>
+              <div>• Pressure switches &amp; transducers</div>
+            </div>
+          </div>
+        </div>
+        <a href="#quote" class="product-inquire">Inquire About Product Range</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   7. PROJECTS
+===================================================== -->
+<section class="section section--alt" id="projects">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <span class="section-eyebrow">Field Verification</span>
+        <h2 class="text-headline-lg section-title" style="margin-top:0.25rem">Featured Hydraulic &amp; Solar Projects</h2>
+        <p class="text-body-md" style="color:var(--color-on-surface-variant);margin-top:0.25rem">Documented engineering engagements across the South, Bekaa Valley, Mount Lebanon, and Northern governorates.</p>
+      </div>
+      <div class="projects-tabs" id="projectTabs">
+        <button class="proj-tab active" onclick="filterProjects('all',this)">All Projects</button>
+        <button class="proj-tab" onclick="filterProjects('accomplished',this)">Accomplished</button>
+        <button class="proj-tab" onclick="filterProjects('ongoing',this)">Ongoing</button>
+      </div>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <!-- Project 1 -->
+      <div class="project-card card-shadow accomplished">
+        <div class="project-img">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdVo7Qva50d_T0DqiGLOYyzTxW7PkGkN_-ulpTsP7o5WzmZ9JkIw3YXTbTlXvdnbUTNZMoRSWLEwa0bwQNNG7gy1CIOTJc7RigQl6HlXZ5he_KMi6KJAQY_NhHKXdG2V-SITsDhiv6r-SlvqzFCd-UATwaEyA8sM3B5xFsp2DukppmUxqdcsPOAU7wWmzeg0Mss17bwrhRl3-Ku54ekRRDeg7VahVGgO68f1DnQuXYqcKdAV07GUPm" alt="Bekaa Valley Solar Pump Project"/>
+          <span class="project-status" style="background:#059669">Accomplished</span>
+          <span class="project-region">Bekaa Valley</span>
+        </div>
+        <div class="project-body">
+          <div>
+            <div class="project-type">Agricultural Pumping Station</div>
+            <div class="project-name">110 kWp Off-Grid Solar Well Project</div>
+            <p class="text-body-sm" style="color:var(--color-on-surface-variant)">Equipped a 380m borehole with heavy stainless pump, powered purely by a 110 kWp photovoltaic array with automatic MPPT tracking.</p>
+          </div>
+          <div class="project-meta">
+            <div>Depth: <strong>380 m</strong></div>
+            <div>Flow Rate: <strong>95 m³/h</strong></div>
+            <div>Client: <strong>Agri-Estate</strong></div>
+            <div>Year: <strong>2023</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card card-shadow accomplished">
+        <div class="project-img">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOhvPkYGuvEK3f1WeilwphVC2RhHZf1XA8obxn-kw-e2FSfYRRi_bx3T3I0nSxQi-o4qbWr-Z4dMWbm1IZGncZw9gvhzHRFIGejONYhx3VMwp1-HWShgNbSjKH8vqtnhKUoDSAI_XCxng93j0O_hIF5UWC1ROi8l7dqppmXpO7_gNQp3WXKe6Zz4ooKGhMqJ72dteNxekg1jAJONduJFSW1JXtbDRs_aBh9h8apoF69UD2o41awETo" alt="South Lebanon Municipal Well"/>
+          <span class="project-status" style="background:#059669">Accomplished</span>
+          <span class="project-region">Ghazieh / South</span>
+        </div>
+        <div class="project-body">
+          <div>
+            <div class="project-type">Municipal Water Supply</div>
+            <div class="project-name">Deep Limestone Aquifer Extraction</div>
+            <p class="text-body-sm" style="color:var(--color-on-surface-variant)">Full turnkey drilling, casing, and dual 75HP borehole pump setup ensuring domestic potable water for a municipal residential sector.</p>
+          </div>
+          <div class="project-meta">
+            <div>Depth: <strong>520 m</strong></div>
+            <div>Yield: <strong>140 m³/h</strong></div>
+            <div>Client: <strong>Municipal</strong></div>
+            <div>Year: <strong>2022</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card card-shadow ongoing">
+        <div class="project-img">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPaeIv9p9LaWwEz-k1jHRlup9hbTHiRBgt6RdU2ew-JYWvij6xD9SjuCpjnb5K4YVwHJV0C2htxn_PPyvgNWvgGJP7fZt2UO1t1t5uRcr9hOtAql3_YF_GkGiHZgUvPxz_dbv30e-hHnKWTsoqsu2FqvWv6m7r2Y36HA01uOWYCKNcm6BYQEJ_Ym39uA8FQrsntvhBgE203JI-SRst8c0bkWaOZnGx374ZEVHSSP6MV6X1_sxReR6Q" alt="Mount Lebanon Hydrogeological Survey"/>
+          <span class="project-status" style="background:#0284C7">Ongoing</span>
+          <span class="project-region">Mount Lebanon</span>
+        </div>
+        <div class="project-body">
+          <div>
+            <div class="project-type">Industrial Facility</div>
+            <div class="project-name">Industrial High-Head Water Infrastructure</div>
+            <p class="text-body-sm" style="color:var(--color-on-surface-variant)">Active drilling through fissured dolomite strata with harmonic-filtered VFD variable speed pumping control for beverage production.</p>
+          </div>
+          <div class="project-meta">
+            <div>Depth: <strong>450 m (Est.)</strong></div>
+            <div>Type: <strong>Hybrid</strong></div>
+            <div>Client: <strong>Industrial</strong></div>
+            <div>Status: <strong style="color:var(--color-secondary)">Logging Phase</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   8. CLIENT FEEDBACK
+===================================================== -->
+<section class="section" id="feedback" style="background:var(--color-surface)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Quality Assurance &amp; Metrics</span>
+      <h2 class="text-headline-lg section-title">Client Satisfaction &amp; Verified Assessments</h2>
+      <p class="section-body text-body-lg">Continuous quality auditing across 25 years of Lebanese municipal, agricultural, and commercial hydraulic commissions.</p>
+    </div>
+
+    <div class="feedback-grid">
+      <!-- Assessment Form -->
+      <div class="assessment-form card-shadow">
+        <div class="assessment-form-head">
+          <span class="material-symbols-outlined" style="color:var(--color-primary)">rate_review</span>
+          <h3 class="text-title-md">Satisfaction Assessment Form</h3>
+        </div>
+        <p class="text-body-sm" style="color:var(--color-on-surface-variant);margin-bottom:1rem">Are you a recent project partner? Submit an expedited quality audit directly to our ISO directorate.</p>
+        <form onsubmit="event.preventDefault();alert('Thank you. Your assessment score has been logged.')">
+          <div style="margin-bottom:12px">
+            <label class="field-label">Project Ref / Borehole No.</label>
+            <input class="field-input" type="text" placeholder="e.g. MDC-BK-2023-41"/>
+          </div>
+          <div style="margin-bottom:12px">
+            <label class="field-label">Engineering Timeliness</label>
+            <select class="field-input">
+              <option>Exceeded Schedule (Ahead of Time)</option>
+              <option>On Time Execution</option>
+              <option>Minor Delay with Prior Notice</option>
+            </select>
+          </div>
+          <div style="margin-bottom:12px">
+            <label class="field-label">Water Yield vs Projection</label>
+            <select class="field-input">
+              <option>Higher Than Projected Yield</option>
+              <option>Exact Match to Geophysical Report</option>
+              <option>Acceptable Flow</option>
+            </select>
+          </div>
+          <div style="margin-bottom:16px">
+            <label class="field-label">Overall Rating</label>
+            <div class="stars">★★★★★</div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Submit Assessment</button>
+        </form>
+      </div>
+
+      <!-- Metrics + Testimonials -->
+      <div>
+        <div class="metrics-row">
+          <div class="metric-cell">
+            <div class="metric-value">98.6%</div>
+            <div class="metric-label">On-Time Completion</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-value">99.2%</div>
+            <div class="metric-label">Client Approval</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-value">4.9 / 5.0</div>
+            <div class="metric-label">Service Quality Rating</div>
+          </div>
+        </div>
+
+        <div class="testimonials-grid" style="margin-top:1rem">
+          <div class="testimonial-card card-shadow">
+            <div>
+              <div class="stars-sm">★★★★★</div>
+              <p class="testimonial-text">"Mustapha Daher Center drilled our 420-meter agricultural well in Zahle under difficult limestone fissures. Their solar pumping installation eliminated our fuel expenses entirely. Unsurpassed precision and engineering rigor."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">EK</div>
+              <div>
+                <div class="author-name">Eng. Elie Khoury</div>
+                <div class="author-role">Director, Bekaa Agro-Industrial Estate</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card card-shadow">
+            <div>
+              <div class="stars-sm">★★★★★</div>
+              <p class="testimonial-text">"When our municipal deep pump experienced critical insulation failure during peak summer, MDC deployed their mobile diagnostic crane within three hours. Their emergency team restored water to 12,000 residents before nightfall."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">HA</div>
+              <div>
+                <div class="author-name">Hassan Al-Amine</div>
+                <div class="author-role">Municipal Water Board Commissioner</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   9. QUOTATION REQUEST
+===================================================== -->
+<section class="section section--alt" id="quote">
+  <div class="container">
+    <div class="quote-section">
+      <div style="text-align:center;margin-bottom:2.5rem">
+        <span class="badge" style="background:var(--color-surface-container);color:var(--color-primary);border-color:rgba(194,199,209,.5);margin-bottom:8px">
+          <span class="material-symbols-outlined" style="font-size:15px">calculate</span>Formal Procurement
+        </span>
+        <h2 class="text-headline-lg section-title">Request an Engineering Quotation</h2>
+        <p class="text-body-md" style="color:var(--color-on-surface-variant);margin-top:0.5rem">Submit your project requirements, aquifer specs, or product inquiries for an itemized estimate prepared by certified hydraulic engineers.</p>
+      </div>
+
+      <!-- WhatsApp Fast Track -->
+      <div class="wa-fast-track">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="wa-avatar"><span class="material-symbols-outlined">chat</span></div>
+          <div>
+            <div class="wa-text-title">Prefer Instant Messaging?</div>
+            <div class="wa-text-body">Chat directly with our senior technical engineers on WhatsApp: <strong>+961 3 581 180</strong> or <strong>+961 70 581 180</strong></div>
+          </div>
+        </div>
+        <a href="https://wa.me/9613581180" class="btn-wa-track" target="_blank" rel="noopener noreferrer">Open WhatsApp Chat</a>
+      </div>
+
+      <!-- Form -->
+      <form class="rfq-form card-shadow" onsubmit="event.preventDefault();alert('Quotation request submitted. Our engineering department will contact you within 24 hours.')">
+        <div class="form-grid">
+          <div>
+            <label class="field-label">First Name *</label>
+            <input class="field-input" type="text" placeholder="e.g. Moustapha" required/>
+          </div>
+          <div>
+            <label class="field-label">Last Name *</label>
+            <input class="field-input" type="text" placeholder="e.g. Daher" required/>
+          </div>
+          <div>
+            <label class="field-label">Company / Organization Name</label>
+            <input class="field-input" type="text" placeholder="e.g. Daher Agricultural Holdings"/>
+          </div>
+          <div>
+            <label class="field-label">Company Registered Address</label>
+            <input class="field-input" type="text" placeholder="City, District, Lebanon"/>
+          </div>
+          <div>
+            <label class="field-label">Requested Service *</label>
+            <select class="field-input" required>
+              <option value="">-- Select Service --</option>
+              <option>Drilling &amp; Equipping Water Wells</option>
+              <option>Installing Solar Power Systems for Pumps</option>
+              <option>General Maintenance &amp; Diagnostic Servicing</option>
+              <option>Hydrogeological Research &amp; Geophysical Survey</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label">Requested Product Group</label>
+            <select class="field-input">
+              <option value="">-- Optional Product Line --</option>
+              <option>Submersible &amp; Surface Pumps</option>
+              <option>Solar Inverters (VFD)</option>
+              <option>Automated Control Panels</option>
+              <option>Cables &amp; Protection Reactors</option>
+              <option>Pipes, Casings &amp; Wellheads</option>
+            </select>
+          </div>
+          <div class="full">
+            <label class="field-label">Technical Specifications &amp; Project Scope</label>
+            <textarea class="field-input" rows="4" placeholder="Detail estimated depth (meters), required flow rate (m³/h), power grid availability, casing diameter, and water usage intent..."></textarea>
+          </div>
+          <div>
+            <label class="field-label">Expected Delivery / Start Date</label>
+            <input class="field-input" type="date"/>
+          </div>
+          <div>
+            <label class="field-label">Project Site Location *</label>
+            <input class="field-input" type="text" placeholder="e.g. Baalbek-Hermel, Ghazieh, or GPS coords" required/>
+          </div>
+          <div>
+            <label class="field-label">Mobile Number (WhatsApp Enabled) *</label>
+            <input class="field-input" type="tel" placeholder="+961 3 000 000" required/>
+          </div>
+          <div>
+            <label class="field-label">Direct Telephone / Office Line</label>
+            <input class="field-input" type="tel" placeholder="+961 7 000 000"/>
+          </div>
+          <div class="full">
+            <label class="field-label">Business Email Address *</label>
+            <input class="field-input" type="email" placeholder="name@company.com" required/>
+          </div>
+          <div class="full">
+            <div class="attach-zone">
+              <div class="attach-text">
+                <span class="material-symbols-outlined" style="color:var(--color-secondary)">attach_file</span>
+                <span>Attach Technical Specs, Geophysical Surveys, or Site Diagrams (PDF, DWG, PNG — max 25 MB)</span>
+              </div>
+              <label class="btn-browse">Browse Files <input type="file" style="display:none"/></label>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="reset" class="btn-reset">Reset Form</button>
+          <button type="submit" class="btn btn-primary">
+            <span class="material-symbols-outlined" style="font-size:18px">send</span>Submit Quotation Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   10. CONTACT
+===================================================== -->
+<section class="section" id="contact" style="background:var(--color-surface)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Direct Engagement</span>
+      <h2 class="text-headline-lg section-title">Contact Our Headquarters &amp; Engineering Facility</h2>
+      <p class="section-body text-body-lg">Reach our engineers directly or visit our facility in Ghazieh, South Lebanon.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Left: Details + Map -->
+      <div>
+        <div class="contact-card card-shadow">
+          <div class="contact-card-title">Mustapha Daher Center Headquarters</div>
+          <div class="contact-row">
+            <span class="material-symbols-outlined">location_on</span>
+            <div>
+              <strong>Physical Address:</strong><br/>
+              Daher Bldg., Régie area, behind the WHITE petrol station,<br/>Ghazieh, South Lebanon
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="material-symbols-outlined">call</span>
+            <div>
+              <strong>Telephone Lines:</strong><br/>
+              Tel: <a href="tel:+9617220181">+961 7 220 181</a><br/>
+              Mobile: <a href="tel:+9613581180">+961 3 581 180</a> / <a href="tel:+96170581180">+961 70 581 180</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="material-symbols-outlined">mail</span>
+            <div>
+              <strong>Electronic Mail:</strong><br/>
+              <a href="mailto:dahercenter@gmail.com">dahercenter@gmail.com</a><br/>
+              <a href="mailto:info@dahercenter.com">info@dahercenter.com</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="material-symbols-outlined">language</span>
+            <div>
+              <strong>Web Portal:</strong><br/>
+              <a href="http://www.dahercenter.com.lb" target="_blank" rel="noopener noreferrer">www.dahercenter.com.lb</a>
+            </div>
+          </div>
+          <span class="open-badge"><span class="open-dot"></span>Headquarters Open Mon–Sat: 08:00–18:00 EET</span>
+        </div>
+
+        <div class="map-frame" style="margin-top:1rem">
+          <div class="map-img">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQgAKrklQGSnyi6K8USaP8gp3KWFumtuY36DPjExIiKqozB611jM_jNWjn5zorgKCFnfZ4-ub45CTL90XtQASx6OdGPbxWXO4S07iCGx0w9GkRkGtyhwQ5RVvIJ7cfMKP0Qs3oof468mP9vIqhmbvV4CQpS0jguCeAlcIdn_I82ZQAEr_ydYIZGsDUpmGI0XMn9R8l9jSkMiBQEYRtpCiEajYbN8lowLa0Osnv3ogFwKogNrT3CP9b" alt="Ghazieh Location Map"/>
+            <div class="map-callout">
+              <div>
+                <div class="map-callout-title">Ghazieh Facility Marker</div>
+                <div class="map-callout-sub">Behind WHITE Petrol Station, Régie Area</div>
+              </div>
+              <a href="https://maps.google.com/?q=Ghazieh+Lebanon" class="btn-map" target="_blank" rel="noopener noreferrer">Open Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Inquiry Form -->
+      <div class="inquiry-form card-shadow">
+        <h3 class="inquiry-title">Send a General Inquiry</h3>
+        <p class="inquiry-sub">For administrative inquiries, supplier partnerships, or scheduled on-site consultations.</p>
+        <form onsubmit="event.preventDefault();alert('Your message has been dispatched to our engineering desk.')">
+          <div class="form-grid" style="margin-bottom:1rem">
+            <div>
+              <label class="field-label">First Name *</label>
+              <input class="field-input" type="text" required/>
+            </div>
+            <div>
+              <label class="field-label">Last Name *</label>
+              <input class="field-input" type="text" required/>
+            </div>
+            <div>
+              <label class="field-label">Company Name</label>
+              <input class="field-input" type="text"/>
+            </div>
+            <div>
+              <label class="field-label">Subject *</label>
+              <input class="field-input" type="text" placeholder="e.g. Well Rehabilitation Inquiry" required/>
+            </div>
+          </div>
+          <div class="form-row-3" style="margin-bottom:1rem">
+            <div>
+              <label class="field-label">Mobile *</label>
+              <input class="field-input" type="tel" placeholder="+961" required/>
+            </div>
+            <div>
+              <label class="field-label">Telephone</label>
+              <input class="field-input" type="tel"/>
+            </div>
+            <div>
+              <label class="field-label">Email *</label>
+              <input class="field-input" type="email" placeholder="you@domain.com" required/>
+            </div>
+          </div>
+          <div style="margin-bottom:1rem">
+            <label class="field-label">Physical Address / City</label>
+            <input class="field-input" type="text" placeholder="Town, Governorate"/>
+          </div>
+          <div style="margin-bottom:1rem">
+            <label class="field-label">Message Content *</label>
+            <textarea class="field-input" rows="5" placeholder="Type your detailed message or question here..." required></textarea>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--color-on-surface-variant);margin-bottom:1rem">
+            <label style="display:flex;align-items:center;gap:8px;cursor:pointer">
+              <span class="material-symbols-outlined" style="color:var(--color-secondary)">attach_file</span>
+              Attach Document (Optional)
+              <input type="file" style="display:none"/>
+            </label>
+            <span style="color:var(--color-outline);font-size:11px">Max: 10 MB</span>
+          </div>
+          <div class="form-actions" style="margin-top:0">
+            <button type="reset" class="btn-reset">Reset</button>
+            <button type="submit" class="btn btn-primary">
+              <span class="material-symbols-outlined" style="font-size:18px">send</span>Send Inquiry
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+   11. FLOATING WHATSAPP
+===================================================== -->
+<div class="wa-float">
+  <span class="wa-tooltip">Quick support — chat on WhatsApp (+961 3 581 180)</span>
+  <a href="https://wa.me/9613581180" class="wa-float-btn" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined">chat</span>
+  </a>
+</div>
+
+<!-- =====================================================
+   12. FOOTER
+===================================================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand">
+          <img src="https://lh3.googleusercontent.com/aida/AEtjO1UwkybF8jNFtH1yeWau34PZzVNnAGohjSApTV8NvNwSJaVQQHgAvXIiYPl47EeTwKszytg8gsy-UWHQA-KWZjJw-xt-G3-REnrO2aPhAvThbOXoas13NSpxnNgMXXsddZjdyGJvoKlcqwcB1nJSzMJJ3ZcrAF4Q7-J3mt5JwI_1gj6ta6YaZCgcFuDaLxNJs8NsFWdFeg49vUOoCH5n4zaWeIu8huJ1G0iZpe4Q8epnWsWd6F1CYmDVGTQ" alt="Mustapha Daher Center"/>
+          <div>
+            <div class="footer-brand-name">Mustapha Daher Center</div>
+            <div class="footer-brand-sub">Water Technologies Experts</div>
+          </div>
+        </div>
+        <p class="footer-desc">Registered hydraulic engineering enterprise founded in 1998 in Ghazieh, South Lebanon. Specialized in borehole excavation, heavy-duty submersible water pumps, solar pumping systems, and hydrogeological diagnostics.</p>
+        <div class="footer-cert">
+          <span class="cert-badge">ISO 9001 Compliance</span>
+          <span class="cert-badge">Lebanese Ministry Reg.</span>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#feedback">Client Feedback</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Disciplines -->
+      <div class="footer-col">
+        <h4>Disciplines</h4>
+        <ul>
+          <li><a href="#services">Drilling &amp; Equipping Water Wells</a></li>
+          <li><a href="#services">Solar Pump Systems</a></li>
+          <li><a href="#services">Maintenance &amp; Servicing</a></li>
+          <li><a href="#services">Hydrogeological Studies</a></li>
+          <li><a href="#products">Inverters &amp; Automated Controls</a></li>
+        </ul>
+      </div>
+
+      <!-- Address -->
+      <div class="footer-col">
+        <h4>Lebanon Operations</h4>
+        <div class="footer-address">
+          <strong>Daher Bldg., Régie Area</strong><br/>
+          Behind WHITE Petrol Station<br/>
+          Ghazieh, South Lebanon<br/><br/>
+          <a href="tel:+9617220181">Tel: +961 7 220 181</a><br/>
+          <a href="tel:+9613581180">Mob: +961 3 581 180</a><br/>
+          <a href="mailto:info@dahercenter.com" style="color:var(--color-secondary);font-family:inherit;font-weight:400;text-decoration:underline">info@dahercenter.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 1998–2024 Mustapha Daher Center for Water Technologies. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <span>•</span>
+        <a href="#">Terms of Service</a>
+        <span>•</span>
+        <a href="#">ISO 9001 Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- =====================================================
+   JAVASCRIPT
+===================================================== -->
+<script>
+// --- Mobile Nav ---
+function openMobileNav()  { document.getElementById('mobileNav').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow=''; }
+document.getElementById('mobileClose').addEventListener('click', closeMobileNav);
+
+// --- Hero Carousel ---
+const slides = [
+  {
+    tag: 'Active Engineering Operation',
+    title: 'Deep Well Drilling Rig Operations',
+    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD1ew8p3Awj8W8Z-66AjRTtaZxB8ncfQbl0Vhfp_FRfaMyh9y7vo9qaHSseDHbZrAolT0MtIefpupK6jGht48Hpby0PjfnZIlAJvTEdfEZ-J8BfVNrJTVNi2m8UqKdb9Y46jdrRXUk8h5Elc_PvZov1bkBn2CxOc9ZY-nX6UDoVdXUIixcw0wxBBxGM_iC2UZJiys-QTYik1cw4IsGF22KqKDT9vk8OPv3Z2J__DzqXukNNddCJfrNI'
+  },
+  {
+    tag: 'Renewable Water Tech',
+    title: 'Solar-Powered Agricultural & Industrial Pumps',
+    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDdVo7Qva50d_T0DqiGLOYyzTxW7PkGkN_-ulpTsP7o5WzmZ9JkIw3YXTbTlXvdnbUTNZMoRSWLEwa0bwQNNG7gy1CIOTJc7RigQl6HlXZ5he_KMi6KJAQY_NhHKXdG2V-SITsDhiv6r-SlvqzFCd-UATwaEyA8sM3B5xFsp2DukppmUxqdcsPOAU7wWmzeg0Mss17bwrhRl3-Ku54ekRRDeg7VahVGgO68f1DnQuXYqcKdAV07GUPm'
+  },
+  {
+    tag: 'High-Tech Diagnostics',
+    title: 'Submersible Pumping Equipment & Monitoring',
+    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBOhvPkYGuvEK3f1WeilwphVC2RhHZf1XA8obxn-kw-e2FSfYRRi_bx3T3I0nSxQi-o4qbWr-Z4dMWbm1IZGncZw9gvhzHRFIGejONYhx3VMwp1-HWShgNbSjKH8vqtnhKUoDSAI_XCxng93j0O_hIF5UWC1ROi8l7dqppmXpO7_gNQp3WXKe6Zz4ooKGhMqJ72dteNxekg1jAJONduJFSW1JXtbDRs_aBh9h8apoF69UD2o41awETo'
+  },
+  {
+    tag: 'Scientific Subterranean Surveys',
+    title: 'Advanced Hydrogeological Surveys & Testing',
+    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDPaeIv9p9LaWwEz-k1jHRlup9hbTHiRBgt6RdU2ew-JYWvij6xD9SjuCpjnb5K4YVwHJV0C2htxn_PPyvgNWvgGJP7fZt2UO1t1t5uRcr9hOtAql3_YF_GkGiHZgUvPxz_dbv30e-hHnKWTsoqsu2FqvWv6m7r2Y36HA01uOWYCKNcm6BYQEJ_Ym39uA8FQrsntvhBgE203JI-SRst8c0bkWaOZnGx374ZEVHSSP6MV6X1_sxReR6Q'
+  }
+];
+
+function changeSlide(idx) {
+  const img   = document.getElementById('carouselImg');
+  const tag   = document.getElementById('carouselTag');
+  const title = document.getElementById('carouselTitle');
+  const tabs  = document.querySelectorAll('#carouselTabs .carousel-tab');
+  img.style.opacity = '0.3';
+  setTimeout(() => {
+    img.src        = slides[idx].src;
+    img.alt        = slides[idx].title;
+    tag.textContent   = slides[idx].tag;
+    title.textContent = slides[idx].title;
+    img.style.opacity = '0.9';
+  }, 200);
+  tabs.forEach((t,i) => t.classList.toggle('active', i === idx));
+}
+
+// Auto-advance carousel
+let current = 0;
+setInterval(() => { current = (current + 1) % slides.length; changeSlide(current); }, 5000);
+
+// --- Project Filtering ---
+function filterProjects(status, btn) {
+  document.querySelectorAll('#projectsGrid .project-card').forEach(c => {
+    c.style.display = (status === 'all' || c.classList.contains(status)) ? 'flex' : 'none';
+  });
+  document.querySelectorAll('#projectTabs .proj-tab').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
+
+// --- Product Filtering ---
+function filterProducts(cat, btn) {
+  document.querySelectorAll('.product-card').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'flex' : 'none';
+  });
+  document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
+
+// --- Active nav link on scroll ---
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
+</script>
+
+</body>
+</html>
