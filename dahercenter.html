@@ -494,6 +494,7 @@ select.field-input { appearance: none; cursor: pointer; }
 
 .carousel-tabs { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-top: 12px; }
 .carousel-tab {
+  min-width: 0;
   padding: 8px;
   text-align: left;
   border-radius: 4px;
@@ -501,6 +502,10 @@ select.field-input { appearance: none; cursor: pointer; }
   background: none;
   cursor: pointer;
   transition: all .15s;
+}
+@media (max-width: 400px) {
+  .carousel-tab { padding: 6px 4px; }
+  .carousel-tab-name { font-size: 11px; }
 }
 .carousel-tab:hover { background: var(--color-surface-container-low); }
 .carousel-tab.active { border-color: var(--color-primary); background: var(--color-surface-container-low); }
